@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MovieCard from './MovieCard';
 import { connect } from "react-redux";
 import { featchMovie, setLoading } from "../movieRedux/movieAction/searchAction";
-import Spinner from './layout/Spinner';
+// import Spinner from './layout/Spinner';
 
 class MovieContainer extends Component {
 
@@ -14,7 +14,7 @@ class MovieContainer extends Component {
         const { movies, searchedMovie } = this.props;
         console.log(movies);
 
-        const movieList = movies && movies.filter((data) => {
+        const movieList = movies && movies.filter((data) =>{
             if (this.props.text == null)
                 return data
 
@@ -32,7 +32,7 @@ class MovieContainer extends Component {
         });
         
 
-        let content = this.props.loading ? <Spinner /> : movieList;
+        // let content = this.props.loading ? <Spinner /> : movieList;
 
         return (
             <div className="row">

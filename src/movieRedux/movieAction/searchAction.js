@@ -1,6 +1,3 @@
-
-
-
 import { SEARCH_MOVIE, FETCH_MOVIES,LOADING, SEARCHED_MOVIE } from "./type";
 import CryptoJS from "crypto-js";
 import $ from "jquery";

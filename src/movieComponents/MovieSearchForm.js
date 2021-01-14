@@ -11,18 +11,17 @@ class MovieSearchForm extends Component {
   }
   componentDidMount() {
     localStorage.setItem("history", JSON.stringify(this.props.text));
-
+   
   }
+
   onChange = e => {
     this.props.searchMovie(e.target.value);
-
-
   };
 
   onSubmit = e => {
     e.preventDefault();
     if (localStorage.getItem("history")) {
-      if (this.state.history.indexOf(this.props.text) == -1) {
+      if (this.state.history.indexOf(this.props.text) === -1) {
         this.state.history.unshift(this.props.text);
         if (this.state.history.length > 5) {
           this.state.history.pop();
